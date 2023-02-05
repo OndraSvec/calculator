@@ -97,7 +97,7 @@ const reducer = (state, { type, payload }) => {
         overwrite: true
       }
     case ACTIONS.POSNEG_TOGGLE:
-      if (state.currentOperand === "0") {
+      if (state.currentOperand === "0" || state.currentOperand == null) {
         return state;
       }
       if (parseFloat(state.currentOperand) < 0) {
